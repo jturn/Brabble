@@ -8,8 +8,13 @@ var randomLetter = function(){
 };
 
 var newGame = function(){
+  
+  $('.tileHolder').empty();
+  for (var i = 0; i <= 15; i++){
+  	$('.tileHolder').append("<div class='tile'></div>");
+  };
 
-	var newTiles = function(){
+	var newTile = function(){
 		$('.tile').each(function(){
 			var letter = randomLetter();
 			this.innerHTML = letter;
@@ -32,7 +37,7 @@ var newGame = function(){
 	  }
 	});
 
-  newTiles();
+  newTile();
 };
 
  
