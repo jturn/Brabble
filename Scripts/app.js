@@ -46,7 +46,7 @@ var newGame = function(){
  
 
 var startGame = function(){
-	var count = 60;
+	var count = 10;
 	var interval;
 
 	var countdownTimer = function(){
@@ -73,6 +73,9 @@ var endGame = function(){
   $('.timer').text("1:00");
   var total = checkWords();
 	alert("Total words: " + total + "!");
+	if (total > $('.score').text()){
+		$('.score').text(total+ '');
+	}
 };
 
 var checkWords = function(){
@@ -101,7 +104,6 @@ var checkWords = function(){
 	playerWords.push(currentWord.split("").reverse().join(""));
   
   for (var i = 0; i < playerWords.length; i++){
-  	debugger;
   	if (_.contains(dictionary, playerWords[i])) {
   		count++;
   	}
