@@ -14,7 +14,7 @@ var randomLetter = function(){
 function fancyAlert(msg) {
     jQuery.fancybox({
         'modal' : true,
-        'content' : "<div style=\"margin:1px;width:600px;height:300px;\"><h1>"+msg+"</h1><div style=\"text-align:center;margin-top:10px;\"><input style=\"margin:3px;padding:0px;height:100px;width:100px;font-size:50px;\" type=\"button\" onclick=\"jQuery.fancybox.close();\" value=\"Play again?\"></div></div>"
+        'content' : "<div style=\"margin:1px;width:600px;height:300px;\"><h1>"+msg+"</h1><div style=\"text-align:center;margin-top:10px;\"><input style=\"margin:3px;padding:0px;height:60px;width:200px;border-radius:20px;font-size:35px;background:#1D263B;outline:none;position:absolute;bottom:0;left:200px;border:none;color:white;\" type=\"button\" onclick=\"jQuery.fancybox.close();\" value=\"Play again?\"></div></div>"
     });
 };
 
@@ -37,6 +37,7 @@ var newGame = function(){
 	
 	$('.tile').draggable({
 	  cursor: 'move',
+	  revertDuration: 400,
 	  revert: 'invalid',
 	  appendTo: 'td'
 	});
