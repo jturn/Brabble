@@ -57,13 +57,13 @@ var newGame = function(){
  
 
 var startGame = function(){
- var clock = $('.timer').FlipClock(5, {
+ var clock = $('.timer').FlipClock(60, {
 	autoStart: false,
 	countdown: true,
 	clockFace: 'Counter'
 });
 
-	var count = 5;
+	var count = 60;
 	var interval;
 
 	var countdownTimer = function(){

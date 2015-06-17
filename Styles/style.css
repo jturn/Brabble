@@ -17,6 +17,7 @@ h1 {
 .brabble{
 	font-family: 'Gloria Hallelujah', cursive;
 	font-size: 110px;
+	margin: 0;
 }
 
 .main {
@@ -54,9 +55,11 @@ h1 {
 }
 
 table {
-	height: 500px;
-	width: 500px;
+	height: 520px;
+	width: 520px;
 	float: right;
+	margin-right: 30px;
+	margin-bottom: 20px;
 }
 td {
 	background: #0B132B;
@@ -67,10 +70,9 @@ td {
 .tileHolder {
 	border-radius: 2px;
 	background-color: #DAE871;
-	height: 450px;
-	width: 600px;
-	width: ;
-	margin: 2px;
+	height: 480px;
+	width: 500px;
+	margin: 0px 20px 0px 20px;
 	border: 5px solid black;
 	padding: 2px;
 	float: left; 
@@ -81,7 +83,7 @@ td {
 	font-color: white;
 	border-radius: 5px;
 	font-size: 60px;
-	margin: 10px;
+	margin: 13px;
 	float: left;
 	border: 2px solid black;
 	height: 80px;
