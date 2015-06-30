@@ -69,17 +69,17 @@ var count = 60;
 var interval;
 
 var countdownTimer = function(){
-		interval = setInterval(countdown, 1000);
-	};
+  interval = setInterval(countdown, 1000);
+};
 
-	var countdown = function(){
-	  if (count > 0){
-	  	clock.decrement();
-	    count--;
-	  } else {
-        clearInterval(interval);
-        endGame();
-      }
+var countdown = function(){
+  if (count > 0){
+  	clock.decrement();
+    count--;
+  } else {
+    clearInterval(interval);
+    endGame();
+    }
 	};
 
 	countdownTimer();
@@ -98,7 +98,8 @@ var endGame = function(){
 var checkWords = function(){
   var count = 0;
   var playerWords = [];
-
+  
+  //Check horizontal rows
   for (var i = 1; i <= 13; i+=4) {
 		var currentWord = $('.box' + i).data("value") + $('.box' + (i+1)).data("value") + $('.box' + (i+2)).data("value") + $('.box' + (i+3)).data("value") || "zzzz";
 		playerWords.push(currentWord);
@@ -110,10 +111,12 @@ var checkWords = function(){
 		playerWords.push(currentWord);
 		playerWords.push(currentWord.split("").reverse().join(""));
 	}
+
   //Check right diagonal
 	var currentWord = $('.box1').data("value") + $('.box6').data("value") + $('.box11').data("value") + $('.box16').data("value") || "zzzz";
 	playerWords.push(currentWord);
 	playerWords.push(currentWord.split("").reverse().join(""));
+  
   //Check left diagonal
 	var currentWord = $('.box4').data("value") + $('.box7').data("value") + $('.box10').data("value") + $('.box13').data("value") || "zzzz";
 	playerWords.push(currentWord);
@@ -128,9 +131,7 @@ var checkWords = function(){
 
 };
 
-
 $(document).ready(function(){
-
 
 $('.start').on('click', function(){
 	newGame();
