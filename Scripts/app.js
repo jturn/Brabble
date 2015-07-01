@@ -74,9 +74,7 @@ var countdown = function(){
     endGame();
     }
 	};
-
 	countdownTimer();
-
 };
 
 var endGame = function(){
