@@ -92,30 +92,30 @@ var checkWords = function(){
   
   //Check horizontal rows
   for (var i = 1; i <= 13; i+=4) {
-		var currentWord = $('.box' + i).data("value") + $('.box' + (i+1)).data("value") + $('.box' + (i+2)).data("value") + $('.box' + (i+3)).data("value") || "zzzz";
-		playerWords.push(currentWord);
-		playerWords.push(currentWord.split("").reverse().join(""));
-	}
-	// Check vertical columns
-	for (var i = 1; i <= 4; i++) {
-		var currentWord = $('.box' + i).data("value") + $('.box' + (i+4)).data("value") + $('.box' + (i+8)).data("value") + $('.box' + (i+12)).data("value") || "zzzz";
-		playerWords.push(currentWord);
-		playerWords.push(currentWord.split("").reverse().join(""));
-	}
+    var currentWord = $('.box' + i).data("value") + $('.box' + (i+1)).data("value") + $('.box' + (i+2)).data("value") + $('.box' + (i+3)).data("value") || "zzzz";
+    playerWords.push(currentWord);
+    playerWords.push(currentWord.split("").reverse().join(""));
+  }
+ // Check vertical columns
+  for (var i = 1; i <= 4; i++) {
+    var currentWord = $('.box' + i).data("value") + $('.box' + (i+4)).data("value") + $('.box' + (i+8)).data("value") + $('.box' + (i+12)).data("value") || "zzzz";
+    playerWords.push(currentWord);
+    playerWords.push(currentWord.split("").reverse().join(""));
+  }
 
   //Check right diagonal
-	var currentWord = $('.box1').data("value") + $('.box6').data("value") + $('.box11').data("value") + $('.box16').data("value") || "zzzz";
-	playerWords.push(currentWord);
-	playerWords.push(currentWord.split("").reverse().join(""));
+  var currentWord = $('.box1').data("value") + $('.box6').data("value") + $('.box11').data("value") + $('.box16').data("value") || "zzzz";
+  playerWords.push(currentWord);
+  playerWords.push(currentWord.split("").reverse().join(""));
   
   //Check left diagonal
-	var currentWord = $('.box4').data("value") + $('.box7').data("value") + $('.box10').data("value") + $('.box13').data("value") || "zzzz";
-	playerWords.push(currentWord);
-	playerWords.push(currentWord.split("").reverse().join(""));
+  var currentWord = $('.box4').data("value") + $('.box7').data("value") + $('.box10').data("value") + $('.box13').data("value") || "zzzz";
+  playerWords.push(currentWord);
+  playerWords.push(currentWord.split("").reverse().join(""));
   
   for (var i = 0; i < playerWords.length; i++){
-  	if (_.contains(dictionary, playerWords[i])) {
-  		count++;
+    if (_.contains(dictionary, playerWords[i])) {
+      count++;
   	}
   }
   return count;
@@ -125,8 +125,8 @@ var checkWords = function(){
 $(document).ready(function(){
 
 $('.start').on('click', function(){
-	newGame();
-	startGame();
+  newGame();
+  startGame();
 });
 
 });
