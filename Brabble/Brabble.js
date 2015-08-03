@@ -11,7 +11,7 @@ var dictionary = {"abbe":"abbe","abbr":"abbr","abcs":"abcs","abed":"abed","abet"
 
 
 var randomLetter = function(){
-  return alphabet[Math.floor(Math.random() * 82)];
+  return alphabet[Math.floor(Math.random() * 81)];
 };
 
 function fancyAlert(msg) {
